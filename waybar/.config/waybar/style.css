@@ -45,8 +45,8 @@ window#waybar {
 #workspaces button {
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #ffffff;
-	padding: 2px 8px;
-	margin: 0;
+	padding-top: 6px;
+	padding-bottom: 0px;
 	min-height: 0;
 }
 
