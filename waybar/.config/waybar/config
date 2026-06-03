@@ -9,10 +9,7 @@
 	"modules-center": [
 		"clock#time"
 	],
-	"modules-right": [
-		"clock#date",
-		"pulseaudio"
-	],
+    "modules-right": ["clock#date", "pulseaudio", "network", "battery"],
 	"clock#time": {
 		"format": "{:%I:%M}",
 		"tooltip": false
@@ -22,8 +19,24 @@
 		"tooltip": false
 	},
 	"pulseaudio": {
-		"format": "{volume}%"
-	},
+        "format": "{volume}%",
+        "format-muted": "󰸈 ",
+        "format-source-muted": "󰸈 "
+    },
+     "battery": {
+		"format": "{capacity}% {icon} ",
+		"format-charging": "{capacity}% {icon}   ",
+		"format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "interface": "wlan*",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰖪 ",
+        "tooltip-format": "{essid} ({signalStrength}%)",
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+        "on-click": "nmtui"
+    },
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
