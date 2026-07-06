@@ -12,7 +12,7 @@
 hl.monitor({ output = "DP-1", mode = "3440x1440@240", position = "0x0", scale = 1 })
 hl.monitor({ output = "DP-2", mode = "3440x1440@240", position = "0x0", scale = 1 })
 hl.monitor({ output = "DP-3", mode = "3440x1440@240", position = "0x0", scale = 1 })
-hl.monitor({ output = "HDMI-A-1", mode = "3840x2160@120", position = "0x0", scale = 2 })
+hl.monitor({ output = "HDMI-A-1", mode = "3840x2160@120", position = "0x0", scale = 1 })
 
 -----------------
 -- MY PROGRAMS --
@@ -29,7 +29,7 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd("hyprlock &")
 	hl.exec_cmd("waybar &")
 	hl.exec_cmd(terminal .. " --hold -T NeoFetchSplash fastfetch")
-	hl.exec_cmd(os.getenv("HOME") .. "/.config/scripts/auto_audio.sh")
+	hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/display_setup_handling.sh")
 end)
 
 ------------------------
