@@ -17,7 +17,7 @@
 monitor=DP-1,3440x1440@240,0x0,1
 monitor=DP-2,3440x1440@240,0x0,1
 monitor=DP-3,3440x1440@240,0x0,1
-monitor=HDMI-A-1,3840x2160@120,0x0,1
+monitor=HDMI-A-1,3840x2160@120,0x0,2
 
 ###################
 ### MY PROGRAMS ###
@@ -366,6 +366,12 @@ windowrule {
     opacity = 1.0 override
 }
 
+windowrule {
+    name = steam-games
+    match:class = ^(steam_app_.*)$
+    workspace = special:magic
+    fullscreen = true
+}
 
 # wofi
 # layerrule = ignorezero, wofi
