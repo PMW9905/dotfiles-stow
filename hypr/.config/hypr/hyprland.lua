@@ -62,6 +62,13 @@ hl.config({
 })
 
 hl.config({
+	cursor = {
+		inactive_timeout = 3,
+	}
+})
+
+
+hl.config({
 	decoration = {
 		rounding         = 10,
 		rounding_power   = 2,
