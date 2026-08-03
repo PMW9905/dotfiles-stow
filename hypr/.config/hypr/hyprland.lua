@@ -47,8 +47,8 @@ hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 
 hl.config({
 	general = {
-		gaps_in          = 5,
-		gaps_out         = { left = 20, right = 20, top = 10, bottom = 20 },
+		gaps_in          = 20,
+		gaps_out         = { left = 40, right = 40, top = 30, bottom = 40 },
 		border_size      = 0,
 		-- https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
 		col              = {
@@ -308,6 +308,13 @@ hl.window_rule({
 	name     = "fix-xwayland-drags",
 	match    = { class = "", title = "", xwayland = true, float = true, fullscreen = false, pin = false },
 	no_focus = true,
+})
+
+-- Discord
+hl.window_rule({
+	name    = "Discord",
+	match   = { class = "discord" },
+	opacity = "0.9 override",
 })
 
 -- Picture-in-Picture
