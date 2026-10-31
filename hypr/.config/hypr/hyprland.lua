@@ -12,7 +12,9 @@
 hl.monitor({ output = "DP-1", mode = "3440x1440@240", position = "0x0", scale = 1 })
 hl.monitor({ output = "DP-2", mode = "3440x1440@240", position = "0x0", scale = 1 })
 hl.monitor({ output = "DP-3", mode = "3440x1440@240", position = "0x0", scale = 1 })
-hl.monitor({ output = "HDMI-A-1", mode = "3840x2160@120", position = "0x0", scale = 1 })
+hl.monitor({ output = "HDMI-A-1", mode = "3840x2160@120", position = "0x0", scale = 2 })
+
+hl.config({ xwayland = { force_zero_scaling = true } })
 
 -----------------
 -- MY PROGRAMS --
@@ -60,6 +62,7 @@ hl.config({
 		layout           = "dwindle",
 	},
 })
+
 
 hl.config({
 	cursor = {
@@ -315,6 +318,13 @@ hl.window_rule({
 	name    = "Discord",
 	match   = { class = "discord" },
 	opacity = "0.9 override",
+})
+
+-- Ardour
+hl.window_rule({
+	name    = "Ardour",
+	match   = { class = "Ardour" },
+	opacity = "0.8 override",
 })
 
 -- Picture-in-Picture
